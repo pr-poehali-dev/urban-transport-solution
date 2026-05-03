@@ -1,155 +1,90 @@
-import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Icon from "@/components/ui/icon"
 
-function TypeTester() {
-  const [scale, setScale] = useState(1)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setScale((prev) => (prev === 1 ? 1.5 : 1))
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
-
-  return (
-    <div className="flex items-center justify-center h-full">
-      <motion.span
-        className="font-serif text-6xl md:text-8xl text-foreground"
-        animate={{ scale }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
-        Aa
-      </motion.span>
-    </div>
-  )
-}
-
-function LayoutAnimation() {
-  const [layout, setLayout] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLayout((prev) => (prev + 1) % 3)
-    }, 2500)
-    return () => clearInterval(interval)
-  }, [])
-
-  const layouts = ["grid-cols-2 grid-rows-2", "grid-cols-3 grid-rows-1", "grid-cols-1 grid-rows-3"]
-
-  return (
-    <div className="h-full p-4 flex items-center justify-center">
-      <motion.div className={`grid ${layouts[layout]} gap-2 w-full max-w-[140px]`} layout>
-        {[1, 2, 3].map((i) => (
-          <motion.div
-            key={i}
-            className="bg-primary/20 rounded-md min-h-[30px]"
-            layout
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          />
-        ))}
-      </motion.div>
-    </div>
-  )
-}
-
-function SpeedIndicator() {
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setProgress(100), 500)
-    return () => clearTimeout(timeout)
-  }, [])
-
-  return (
-    <div className="flex flex-col items-center justify-center h-full gap-4">
-      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">100ms</span>
-      <span className="text-sm text-muted-foreground">Загрузка</span>
-      <div className="w-full max-w-[120px] h-1.5 bg-foreground/10 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full bg-primary rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.1 }}
-        />
-      </div>
-    </div>
-  )
-}
+const details = [
+  {
+    icon: "Calendar",
+    label: "Дата и время",
+    title: "14 июня 2025",
+    description: "Церемония начинается в 15:00. Пожалуйста, прибудьте немного заранее.",
+    color: "#D4AF37",
+  },
+  {
+    icon: "MapPin",
+    label: "Место",
+    title: "Усадьба «Берёзовая роща»",
+    description: "г. Москва, Рублёво-Успенское шоссе, 42. Банкетный зал «Белый зал».",
+    color: "#FFD1DC",
+  },
+  {
+    icon: "Car",
+    label: "Как добраться",
+    title: "Транспорт и парковка",
+    description: "Бесплатная парковка на территории. От м. Молодёжная — автобус №591 до остановки «Усадьба».",
+    color: "#D4AF37",
+  },
+]
 
 export function FeaturesSection() {
   return (
-    <section className="bg-background px-6 py-24">
+    <section className="bg-secondary px-6 py-24">
       <div className="max-w-6xl mx-auto">
-        <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+        <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Возможности
-        </motion.p>
+          <p className="text-xs uppercase tracking-[0.4em] text-foreground/40 font-sans mb-4">детали</p>
+          <h2 className="text-3xl md:text-5xl font-serif text-foreground">Детали мероприятия</h2>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Typography Card */}
-          <motion.div
-            className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 0.98 }}
-            whileTap={{ scale: 0.96 }}
-            transition={{ duration: 0.2 }}
-            data-clickable
-          >
-            <div className="flex-1">
-              <TypeTester />
-            </div>
-            <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Типографика</h3>
-              <p className="text-muted-foreground text-sm mt-1">Красивые шрифты, которые идеально масштабируются.</p>
-            </div>
-          </motion.div>
-
-          {/* Layouts Card */}
-          <motion.div
-            className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ scale: 0.98 }}
-            whileTap={{ scale: 0.96 }}
-            data-clickable
-          >
-            <div className="flex-1">
-              <LayoutAnimation />
-            </div>
-            <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Макеты</h3>
-              <p className="text-muted-foreground text-sm mt-1">Гибкие сетки, которые адаптируются под контент.</p>
-            </div>
-          </motion.div>
-
-          {/* Speed Card */}
-          <motion.div
-            className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            whileHover={{ scale: 0.98 }}
-            whileTap={{ scale: 0.96 }}
-            data-clickable
-          >
-            <div className="flex-1">
-              <SpeedIndicator />
-            </div>
-            <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Скорость</h3>
-              <p className="text-muted-foreground text-sm mt-1">Молниеносная загрузка страниц для ваших гостей.</p>
-            </div>
-          </motion.div>
+          {details.map((item, i) => (
+            <motion.div
+              key={i}
+              className="bg-background rounded-2xl p-8 min-h-[280px] flex flex-col border border-border"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              whileHover={{ scale: 0.98 }}
+              whileTap={{ scale: 0.96 }}
+            >
+              <div
+                className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                style={{ backgroundColor: item.color + "30" }}
+              >
+                <Icon name={item.icon as "Calendar"} size={24} style={{ color: item.color }} />
+              </div>
+              <p className="text-xs uppercase tracking-widest font-sans mb-2" style={{ color: item.color }}>
+                {item.label}
+              </p>
+              <h3 className="font-serif text-xl text-foreground mb-3">{item.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-1">{item.description}</p>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Карта */}
+        <motion.div
+          className="mt-10 rounded-2xl overflow-hidden border border-border shadow-sm"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.5!2d37.3!3d55.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzAwLjAiTiAzN8KwMTgnMDAuMCJF!5e0!3m2!1sru!2sru!4v1600000000000!5m2!1sru!2sru"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Место проведения"
+          />
+        </motion.div>
       </div>
     </section>
   )

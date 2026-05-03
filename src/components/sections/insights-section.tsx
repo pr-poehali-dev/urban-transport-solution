@@ -1,100 +1,93 @@
-import type React from "react"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion"
+import Icon from "@/components/ui/icon"
 
-const articles = [
+const dresscodeItems = [
   {
-    title: "Искусство визуального сторителлинга",
-    category: "Дизайн",
-    image: "/visual-storytelling-design-article.jpg",
+    gender: "Для гостей",
+    style: "Коктейльный / Романтичный",
+    hint: "Пастельные тона, нежные оттенки — розовый, голубой, лавандовый, бежевый.",
+    icon: "Sparkles",
   },
   {
-    title: "Как создать личный бренд онлайн",
-    category: "Стратегия",
-    image: "/personal-branding-digital-marketing.jpg",
-  },
-  {
-    title: "Тренды типографики 2025",
-    category: "Типографика",
-    image: "/typography-trends-modern-fonts.jpg",
-  },
-  {
-    title: "Минимализм в дизайне портфолио",
-    category: "Вдохновение",
-    image: "/placeholder.svg?height=200&width=300",
+    gender: "Просьба",
+    style: "Без белого",
+    hint: "Белый цвет оставим невесте. Яркие неоновые оттенки лучше приберечь для другого случая.",
+    icon: "Heart",
   },
 ]
 
 export function InsightsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY })
-  }
-
   return (
-    <section className="bg-background px-6 py-24" onMouseMove={handleMouseMove}>
-      <div className="max-w-4xl mx-auto">
-        <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+    <section className="bg-secondary px-6 py-24">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Статьи
-        </motion.p>
+          <p className="text-xs uppercase tracking-[0.4em] text-foreground/40 font-sans mb-4">стиль</p>
+          <h2 className="text-3xl md:text-5xl font-serif text-foreground">Дресс-код</h2>
+          <p className="text-muted-foreground mt-4 max-w-md mx-auto font-sans">
+            Хотим, чтобы все гости чувствовали себя красивыми и комфортными.
+          </p>
+        </motion.div>
 
-        <div className="divide-y divide-border">
-          {articles.map((article, i) => (
-            <motion.a
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          {dresscodeItems.map((item, i) => (
+            <motion.div
               key={i}
-              href="#"
-              className="group flex items-center justify-between py-6 relative"
-              initial={{ opacity: 0, y: 20 }}
+              className="bg-background rounded-2xl p-8 border border-border"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              onMouseEnter={() => setHoveredIndex(i)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              whileHover={{ paddingLeft: 16, paddingRight: 16 }}
-              data-clickable
+              transition={{ delay: i * 0.15 }}
             >
-              <div className="flex-1">
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">{article.category}</span>
-                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-1 group-hover:text-primary transition-colors">
-                  {article.title}
-                </h3>
+              <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mb-5">
+                <Icon name={item.icon as "Sparkles"} size={22} style={{ color: "#D4AF37" }} />
               </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-            </motion.a>
+              <p className="text-xs uppercase tracking-widest font-sans text-foreground/40 mb-2">{item.gender}</p>
+              <h3 className="font-serif text-2xl text-foreground mb-3">{item.style}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.hint}</p>
+            </motion.div>
           ))}
         </div>
 
-        {/* Floating hover image */}
-        <AnimatePresence>
-          {hoveredIndex !== null && (
-            <motion.div
-              className="fixed pointer-events-none z-50 w-[200px] md:w-[300px] rounded-lg overflow-hidden shadow-2xl hidden md:block"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-                x: mousePosition.x + 20,
-                y: mousePosition.y - 100,
-              }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.2 }}
-            >
-              <img
-                src={articles[hoveredIndex].image || "/placeholder.svg"}
-                alt={articles[hoveredIndex].title}
-                className="w-full h-auto"
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Цветовая палитра дресс-кода */}
+        <motion.div
+          className="bg-background rounded-2xl p-8 border border-border"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          <p className="text-xs uppercase tracking-widest font-sans text-foreground/40 mb-5 text-center">рекомендуемые цвета</p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            {[
+              { color: "#FFD1DC", name: "Розовый" },
+              { color: "#C8D8E8", name: "Голубой" },
+              { color: "#E8D5F5", name: "Лавандовый" },
+              { color: "#F5E6D3", name: "Бежевый" },
+              { color: "#D4E8D0", name: "Мятный" },
+              { color: "#D4AF37", name: "Золотой" },
+            ].map((c, i) => (
+              <motion.div
+                key={i}
+                className="flex flex-col items-center gap-2"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <div
+                  className="w-12 h-12 rounded-full shadow-md border border-border"
+                  style={{ backgroundColor: c.color }}
+                />
+                <p className="text-xs text-muted-foreground font-sans">{c.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )
