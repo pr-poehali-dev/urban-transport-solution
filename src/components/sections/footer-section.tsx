@@ -45,7 +45,7 @@ export function FooterSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Анна & Максим
+          Мария & Максим
         </motion.h2>
 
         <motion.p
@@ -100,7 +100,7 @@ export function FooterSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <p className="text-muted-foreground text-xs font-sans">© 2025 Анна & Максим · Сделано с любовью</p>
+          <p className="text-muted-foreground text-xs font-sans">© 2025 Мария & Максим · Сделано с любовью</p>
         </motion.div>
       </div>
     </footer>
