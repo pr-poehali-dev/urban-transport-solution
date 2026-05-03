@@ -23,7 +23,7 @@ export function FooterSection() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none">
         <div
           className="absolute inset-0 opacity-30 blur-3xl rounded-full"
-          style={{ background: "radial-gradient(circle, #D4AF37 0%, #FFD1DC 60%, transparent 100%)" }}
+          style={{ background: "radial-gradient(circle, #A8A9AD 0%, #FFD1DC 60%, transparent 100%)" }}
         />
       </div>
 
@@ -35,7 +35,7 @@ export function FooterSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="w-10 h-10 rounded-full border-2 border-primary -mr-3 shadow-sm" style={{ borderColor: "#D4AF37" }} />
+          <div className="w-10 h-10 rounded-full border-2 border-primary -mr-3 shadow-sm" style={{ borderColor: "#A8A9AD" }} />
           <div className="w-10 h-10 rounded-full border-2 border-accent shadow-sm" style={{ borderColor: "#FFD1DC" }} />
         </motion.div>
 
@@ -55,7 +55,7 @@ export function FooterSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          14 июня 2025 · Ждём вас с радостью!
+          26 июня 2026 · Ждём вас с радостью!
         </motion.p>
 
         {/* Контакты */}
@@ -100,7 +100,7 @@ export function FooterSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <p className="text-muted-foreground text-xs font-sans">© 2025 Мария & Максим · Сделано с любовью</p>
+          <p className="text-muted-foreground text-xs font-sans">© 2026 Мария & Максим · Сделано с любовью</p>
         </motion.div>
       </div>
     </footer>

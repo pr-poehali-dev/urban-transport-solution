@@ -44,7 +44,7 @@ export function InsightsSection() {
               transition={{ delay: i * 0.15 }}
             >
               <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mb-5">
-                <Icon name={item.icon as "Sparkles"} size={22} style={{ color: "#D4AF37" }} />
+                <Icon name={item.icon as "Sparkles"} size={22} style={{ color: "#A8A9AD" }} />
               </div>
               <p className="text-xs uppercase tracking-widest font-sans text-foreground/40 mb-2">{item.gender}</p>
               <h3 className="font-serif text-2xl text-foreground mb-3">{item.style}</h3>
@@ -69,7 +69,7 @@ export function InsightsSection() {
               { color: "#E8D5F5", name: "Лавандовый" },
               { color: "#F5E6D3", name: "Бежевый" },
               { color: "#D4E8D0", name: "Мятный" },
-              { color: "#D4AF37", name: "Золотой" },
+              { color: "#A8A9AD", name: "Серебристый" },
             ].map((c, i) => (
               <motion.div
                 key={i}

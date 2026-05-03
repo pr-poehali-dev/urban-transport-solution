@@ -13,14 +13,14 @@
     --ink: 0 0% 20%;
     --iris: 351 100% 88%; /* #FFD1DC розовый */
     --lilac: 351 100% 91%;
-    --lime: 46 63% 52%; /* #D4AF37 золотой */
+    --lime: 220 10% 65%; /* серебристый металлик */
     --muted-foreground: 0 0% 50%;
 
     --card: 36 60% 96%;
     --card-foreground: 0 0% 20%;
     --popover: 36 100% 98%;
     --popover-foreground: 0 0% 20%;
-    --primary: 46 63% 52%; /* золотой акцент */
+    --primary: 220 10% 65%; /* серебристый металлик */
     --primary-foreground: 0 0% 100%;
     --secondary: 36 60% 95%;
     --secondary-foreground: 0 0% 20%;
@@ -31,7 +31,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 351 40% 88%;
     --input: 36 40% 90%;
-    --ring: 46 63% 52%;
+    --ring: 220 10% 65%;
 
     --radius: 0.75rem;
 

@@ -65,7 +65,7 @@ export function ShowcaseSection() {
               >
                 {/* Время (мобиль) */}
                 <div className="flex-shrink-0 w-[60px] md:hidden text-right">
-                  <span className="text-sm font-sans font-bold" style={{ color: "#D4AF37" }}>
+                  <span className="text-sm font-sans font-bold" style={{ color: "#A8A9AD" }}>
                     {item.time}
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export function ShowcaseSection() {
                 <div className={`ml-[88px] md:ml-0 md:w-[calc(50%-40px)] ${i % 2 === 0 ? "md:text-right md:pr-8" : "md:pl-8"}`}>
                   <span
                     className="hidden md:block text-sm font-sans font-bold mb-1"
-                    style={{ color: "#D4AF37" }}
+                    style={{ color: "#A8A9AD" }}
                   >
                     {item.time}
                   </span>

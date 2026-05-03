@@ -37,7 +37,7 @@ export function HeroSection() {
             key={i}
             className="absolute w-3 h-5 rounded-full opacity-20"
             style={{
-              background: i % 2 === 0 ? "#FFD1DC" : "#D4AF37",
+              background: i % 2 === 0 ? "#FFD1DC" : "#A8A9AD",
               left: `${10 + i * 15}%`,
               top: `${15 + (i % 3) * 20}%`,
             }}
@@ -106,10 +106,10 @@ export function HeroSection() {
           приглашаем на нашу свадьбу
         </p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center text-foreground mix-blend-multiply">
-          Мария <span style={{ color: "#D4AF37" }}>&</span> Максим
+          Мария <span style={{ color: "#A8A9AD" }}>&</span> Максим
         </h1>
         <p className="text-xl md:text-2xl font-serif italic text-foreground/70">
-          14 июня 2025
+          26 июня 2026
         </p>
       </motion.div>
 

@@ -29,7 +29,7 @@ export function PricingSection() {
           viewport={{ once: true }}
         >
           <div className="w-14 h-14 rounded-full bg-white/60 flex items-center justify-center mx-auto mb-6">
-            <Icon name="Gift" size={26} style={{ color: "#D4AF37" }} />
+            <Icon name="Gift" size={26} style={{ color: "#A8A9AD" }} />
           </div>
           <p className="text-xs uppercase tracking-[0.4em] text-foreground/40 font-sans mb-4">подарки</p>
           <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-5">О подарках</h2>
@@ -38,7 +38,7 @@ export function PricingSection() {
             мы будем рады денежному подарку на нашу совместную мечту — путешествие в Японию.
           </p>
           <div className="inline-flex items-center gap-3 bg-white/70 rounded-xl px-6 py-4 border border-white/80">
-            <Icon name="CreditCard" size={18} style={{ color: "#D4AF37" }} />
+            <Icon name="CreditCard" size={18} style={{ color: "#A8A9AD" }} />
             <span className="font-sans text-foreground/70 text-sm">Номер карты: <strong className="text-foreground">4276 •••• •••• 8842</strong></span>
           </div>
         </motion.div>
@@ -53,7 +53,7 @@ export function PricingSection() {
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-[0.4em] text-foreground/40 font-sans mb-4">RSVP</p>
             <h2 className="text-3xl md:text-5xl font-serif text-foreground">Подтвердите участие</h2>
-            <p className="text-muted-foreground mt-4 font-sans">Пожалуйста, ответьте до 1 мая 2025 года.</p>
+            <p className="text-muted-foreground mt-4 font-sans">Пожалуйста, ответьте до 1 мая 2026 года.</p>
           </div>
 
           <div className="max-w-xl mx-auto">
@@ -67,7 +67,7 @@ export function PricingSection() {
                   exit={{ opacity: 0 }}
                 >
                   <div className="w-20 h-20 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-6">
-                    <Icon name="Heart" size={36} style={{ color: "#D4AF37" }} />
+                    <Icon name="Heart" size={36} style={{ color: "#A8A9AD" }} />
                   </div>
                   <h3 className="font-serif text-2xl text-foreground mb-3">Спасибо!</h3>
                   <p className="text-muted-foreground font-sans">Мы получили ваш ответ и очень ждём вас!</p>
@@ -143,7 +143,7 @@ export function PricingSection() {
                   <motion.button
                     type="submit"
                     className="w-full py-4 px-6 rounded-xl font-sans font-medium text-white transition-all"
-                    style={{ background: "linear-gradient(135deg, #D4AF37, #C49B2F)" }}
+                    style={{ background: "linear-gradient(135deg, #A8A9AD, #888A8D)" }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     data-clickable

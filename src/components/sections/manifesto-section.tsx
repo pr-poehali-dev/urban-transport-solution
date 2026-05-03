@@ -44,7 +44,7 @@ export function ManifestoSection() {
           className="absolute inset-0 text-3xl md:text-5xl lg:text-6xl font-serif leading-tight"
           style={{
             clipPath,
-            background: "linear-gradient(135deg, #D4AF37 0%, #FFD1DC 50%, #D4AF37 100%)",
+            background: "linear-gradient(135deg, #A8A9AD 0%, #FFD1DC 50%, #A8A9AD 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
@@ -62,9 +62,9 @@ export function ManifestoSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          Это был обычный летний вечер, когда судьба свела нас вместе. 
-          Мы и не подозревали, что эта встреча изменит всё. 
-          Три года вместе — и мы готовы сказать «да» на всю жизнь.
+          Случайности не случайны, как и наша встреча друг с другом. Словно я был льдом, а она пламенем.
+          Мы были абсолютно разными, но, в то же время, очень похожими. Не нужно много времени чтобы понять
+          твой ли это человек, но сейчас мы оба можем сказать да.
         </motion.p>
       </div>
 
