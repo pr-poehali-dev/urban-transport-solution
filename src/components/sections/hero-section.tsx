@@ -106,7 +106,7 @@ export function HeroSection() {
           приглашаем на нашу свадьбу
         </p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center text-foreground mix-blend-multiply">
-          Мария <span style={{ color: "#A8A9AD" }}>&</span> Максим
+          Максим <span style={{ color: "#A8A9AD" }}>&</span> Мария
         </h1>
         <p className="text-xl md:text-2xl font-serif italic text-foreground/70">
           26 июня 2026
