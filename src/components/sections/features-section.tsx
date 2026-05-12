@@ -6,22 +6,15 @@ const details = [
     icon: "Calendar",
     label: "Дата и время",
     title: "26 июня 2026",
-    description: "Церемония начинается в 15:00. Пожалуйста, прибудьте немного заранее.",
+    description: "Церемония начинается в 14:00. Пожалуйста, прибудьте немного заранее.",
     color: "#A8A9AD",
   },
   {
     icon: "MapPin",
     label: "Место",
-    title: "Усадьба «Берёзовая роща»",
-    description: "г. Москва, Рублёво-Успенское шоссе, 42. Банкетный зал «Белый зал».",
+    title: "ЗАГС по Ленинскому району",
+    description: "г. Саратов, ул. Гвардейская, д. 13В",
     color: "#FFD1DC",
-  },
-  {
-    icon: "Car",
-    label: "Как добраться",
-    title: "Транспорт и парковка",
-    description: "Бесплатная парковка на территории. От м. Молодёжная — автобус №591 до остановки «Усадьба».",
-    color: "#A8A9AD",
   },
 ]
 
@@ -39,7 +32,7 @@ export function FeaturesSection() {
           <h2 className="text-3xl md:text-5xl font-serif text-foreground">Детали мероприятия</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {details.map((item, i) => (
             <motion.div
               key={i}
@@ -66,25 +59,7 @@ export function FeaturesSection() {
           ))}
         </div>
 
-        {/* Карта */}
-        <motion.div
-          className="mt-10 rounded-2xl overflow-hidden border border-border shadow-sm"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.5!2d37.3!3d55.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzAwLjAiTiAzN8KwMTgnMDAuMCJF!5e0!3m2!1sru!2sru!4v1600000000000!5m2!1sru!2sru"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Место проведения"
-          />
-        </motion.div>
+
       </div>
     </section>
   )
