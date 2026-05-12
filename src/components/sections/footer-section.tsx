@@ -66,14 +66,14 @@ export function FooterSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <a href="mailto:anna.maksim2025@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors" data-clickable>
-            <Icon name="Mail" size={16} />
-            anna.maksim2025@gmail.com
+          <a href="tel:+79003138002" className="flex items-center gap-2 hover:text-foreground transition-colors" data-clickable>
+            <Icon name="Phone" size={16} />
+            +7 (900) 313-80-02
           </a>
           <span className="hidden md:block text-border">|</span>
-          <a href="tel:+79001234567" className="flex items-center gap-2 hover:text-foreground transition-colors" data-clickable>
+          <a href="tel:+79873029981" className="flex items-center gap-2 hover:text-foreground transition-colors" data-clickable>
             <Icon name="Phone" size={16} />
-            +7 (900) 123-45-67
+            +7 (987) 302-99-81
           </a>
         </motion.div>
 
