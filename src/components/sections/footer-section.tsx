@@ -77,22 +77,6 @@ export function FooterSection() {
           </a>
         </motion.div>
 
-        {/* Кнопка поделиться */}
-        <motion.button
-          onClick={handleShare}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-white/60 hover:bg-white/90 text-foreground font-sans text-sm transition-all"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          data-clickable
-        >
-          <Icon name="Share2" size={16} />
-          Поделиться приглашением
-        </motion.button>
-
         <motion.div
           className="mt-16 pt-8 border-t border-border/50"
           initial={{ opacity: 0 }}
