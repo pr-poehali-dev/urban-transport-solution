@@ -67,9 +67,9 @@ export function InsightsSection() {
               { color: "#FFD1DC", name: "Розовый" },
               { color: "#C8D8E8", name: "Голубой" },
               { color: "#E8D5F5", name: "Лавандовый" },
-              { color: "#F5E6D3", name: "Бежевый" },
-              { color: "#D4E8D0", name: "Мятный" },
-              { color: "#A8A9AD", name: "Серебристый" },
+              { color: "#F5E6D3", name: "Сливочный" },
+              { color: "#6B4226", name: "Коричневый" },
+              { color: "#1A1A1A", name: "Чёрный" },
             ].map((c, i) => (
               <motion.div
                 key={i}
