@@ -12,7 +12,7 @@ const details = [
   {
     icon: "MapPin",
     label: "Место",
-    title: "ЗАГС по Ленинскому району",
+    title: "Отдел ЗАГС по Ленинскому району",
     description: "г. Саратов, ул. Гвардейская, д. 13В",
     color: "#FFD1DC",
   },
