@@ -4,14 +4,14 @@ import Icon from "@/components/ui/icon"
 const dresscodeItems = [
   {
     gender: "Для гостей",
-    style: "Коктейльный / Романтичный",
+    style: "Нежная картинка",
     hint: "Пастельные тона, нежные оттенки — розовый, голубой, лавандовый, бежевый.",
     icon: "Sparkles",
   },
   {
     gender: "Просьба",
-    style: "Без белого",
-    hint: "Белый цвет оставим невесте. Яркие неоновые оттенки лучше приберечь для другого случая.",
+    style: "Без белого/зеленого",
+    hint: "Белый цвет оставим невесте, а зеленый жениху. Яркие неоновые оттенки лучше приберечь для другого случая.",
     icon: "Heart",
   },
 ]
@@ -29,7 +29,7 @@ export function InsightsSection() {
           <p className="text-xs uppercase tracking-[0.4em] text-foreground/40 font-sans mb-4">стиль</p>
           <h2 className="text-3xl md:text-5xl font-serif text-foreground">Дресс-код</h2>
           <p className="text-muted-foreground mt-4 max-w-md mx-auto font-sans">
-            Хотим, чтобы все гости чувствовали себя красивыми и комфортными.
+            Дорогие гости, чтобы фото получились максимально гармоничными, просим Вас придерживаться рекомендованных цветов.
           </p>
         </motion.div>
 
