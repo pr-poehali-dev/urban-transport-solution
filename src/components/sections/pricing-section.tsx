@@ -23,10 +23,13 @@ export function PricingSection() {
             Ваш приход — уже лучший подарок для нас! Но если захотите порадовать нас чем-то особенным, 
             мы будем рады денежному подарку на наш новый ремонт в квартире.
           </p>
-          <div className="inline-flex items-center gap-3 bg-white/70 rounded-xl px-6 py-4 border border-white/80">
+          <div className="inline-flex items-center gap-3 bg-white/70 rounded-xl px-6 py-4 border border-white/80 mb-4">
             <Icon name="CreditCard" size={18} style={{ color: "#A8A9AD" }} />
             <span className="font-sans text-foreground/70 text-sm">Номер карты: <strong className="text-foreground">2202 2053 9022 0983</strong></span>
           </div>
+          <p className="text-muted-foreground font-sans text-sm">
+            Либо на торжестве — наш семейный банк будет ждать ваш подарок.
+          </p>
         </motion.div>
 
 
