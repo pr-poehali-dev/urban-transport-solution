@@ -48,13 +48,13 @@ export function HeroSection() {
       </div>
 
       {/* Стопка фотографий */}
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center w-[340px] md:w-[460px]">
         <motion.div
-          className="absolute w-[220px] md:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
-          style={{ rotate: rotate1, x: x1, y, zIndex: 1 }}
+          className="absolute w-[180px] md:w-[220px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
+          style={{ rotate: rotate1, x: x1, y, zIndex: 1, left: "0px" }}
           initial={{ clipPath: "inset(100% 0 0 0)" }}
           animate={{ clipPath: "inset(0 0 0 0)" }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0, ease: [0.16, 1, 0.3, 1] }}
         >
           <img
             src={images[0]}
@@ -65,11 +65,11 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="relative w-[220px] md:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
+          className="relative w-[180px] md:w-[220px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl mx-auto"
           style={{ rotate: rotate2, y, zIndex: 2 }}
           initial={{ clipPath: "inset(100% 0 0 0)" }}
           animate={{ clipPath: "inset(0 0 0 0)" }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
           <img
             src={images[1]}
@@ -80,11 +80,11 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="absolute w-[220px] md:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
-          style={{ rotate: rotate3, x: x3, y, zIndex: 1 }}
+          className="absolute w-[180px] md:w-[220px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
+          style={{ rotate: rotate3, x: x3, y, zIndex: 1, right: "0px" }}
           initial={{ clipPath: "inset(100% 0 0 0)" }}
           animate={{ clipPath: "inset(0 0 0 0)" }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         >
           <img
             src={images[2]}
